@@ -5,9 +5,10 @@
 # https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
 #
 theme : beige
-theme-override : assets/css/PITCHME.css
-logo : assets/image/logo.png
-highlight : hybrid
+theme-override : assets/css/PITCHME.codemax.css
+logo : assets/image/newcity_logo_black.gif
+highlight : atom-one-dark
+slide-number: trie
 transition : none
-published : true
-footnote : "GitPitch [ Beige ] Presentation Template"
+published : false
+footnote : "NewCity | The College of Idaho | Website Administration Training"
