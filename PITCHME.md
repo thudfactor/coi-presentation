@@ -4,6 +4,12 @@
 
 ---
 
+## Following along
+
+This presentation is at https://gitpitch.com/thudafactor/coi-training .
+
+---
+
 ## Agenda
 
 - Day 1: Pantheon & Drupal Admin
