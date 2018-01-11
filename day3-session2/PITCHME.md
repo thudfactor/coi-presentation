@@ -23,4 +23,3 @@ there are standard ones, also you can make your own
 
 ---?code=src/coi_imports/src/Plugin/migrate/process/Phone.php&title="Making Phone Numbers out of Extensions."
 
-Migrations 

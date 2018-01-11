@@ -41,9 +41,11 @@ Is your development environment ready?
 
 ## Ground Rules
 
-- @fa[fighter-jet] Stop me if I go to fast 
-- @fa[clock-o] Tell me if I go to slow 
-- @fa[question-circle] Ask questions at any time
+@fa[fighter-jet] Stop me if I go too fast 
+
+@fa[clock-o] Tell me if I go too slow 
+
+@fa[question-circle] Ask questions at any time
 
 ---
 ## Next Section
