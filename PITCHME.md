@@ -6,39 +6,39 @@
 
 ## Following along
 
-This presentation is at https://gitpitch.com/thudafactor/coi-training .
+This presentation is at https://gitpitch.com/thudfactor/coi-training .
 
 ---
 
 ## Agenda
 
-- Day 1: Pantheon & Drupal Admin
-- Day 2: Patternlab & Drupal Templates
-- Day 3: Peak Tool, Data Migration, and more TBD
+- *Day 1*: Pantheon & Drupal Admin |
+- *Day 2*: Patternlab & Drupal Templates |
+- *Day 3*: Peak Tool, Data Migration, and more TBD |
 
 +++
 
 ### Daily Schedule
 
-- 9:00 - 12:00, a break in the middle
-- 12:00 - 1:00, lunch
-- 1:00 - 4:00, with a break in the middle
-- 4:00 - 5:00, open
+- *9:00 - 12:00*, a break in the middle |
+- *12:00 - 1:00*, lunch |
+- *1:00 - 4:00*, with a break in the middle |
+- *4:00 - 5:00*, open |
 
 +++
 
 ### Last Day
 
-The last half of the last day is unstructured to give us time to work together on changes or bug fixes on the College of Idaho site. 
+After lunch we will have time to work on issues or changes together. 
 
 ---
 
 ## Tools
 
-- Today is mostly in the browser
-- Days 2 and 3 we will be using the command line a lot
-- Hopefully you already have already gotten a development environment functional
-- If not, there's an alternative (slower) method.
+- Today is mostly in the browser |
+- Days 2 and 3 we will be using the command line a lot |
+- Hopefully you already have already gotten a development environment functional |
+- If not, there's an alternative (slower) method. |
 
 ---
 
