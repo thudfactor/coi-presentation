@@ -12,18 +12,18 @@ This presentation is at https://gitpitch.com/thudfactor/coi-training .
 
 ## Agenda
 
-- *Day 1*: Pantheon & Drupal Admin |
-- *Day 2*: Patternlab & Drupal Templates |
-- *Day 3*: Peak Tool, Data Migration, and more TBD |
+- Day 1: Pantheon & Drupal Admin |
+- Day 2: Patternlab & Drupal Templates |
+- Day 3: Peak Tool, Data Migration, and more TBD |
 
 +++
 
 ### Daily Schedule
 
-- *9:00 - 12:00*, a break in the middle |
-- *12:00 - 1:00*, lunch |
-- *1:00 - 4:00*, with a break in the middle |
-- *4:00 - 5:00*, open |
+- 9:00 - 12:00, a break in the middle |
+- **12:00 - 1:00**, lunch |
+- 1:00 - 4:00, with a break in the middle |
+- 4:00 - 5:00, open |
 
 +++
 
