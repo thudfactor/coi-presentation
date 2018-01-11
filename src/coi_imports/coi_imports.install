@@ -1,0 +1,19 @@
+<?php
+
+function coi_imports_uninstall() {
+  // db_drop_table('migrate_map_directory');
+  // db_drop_table('migrate_message_directory');
+  // Drupal::configFactory()->getEditable('migrate_plus.migration.directory')->delete();
+
+  // db_drop_table('migrate_map_courses');
+  // db_drop_table('migrate_message_courses');
+  // Drupal::configFactory()->getEditable('migrate_plus.migration.courses')->delete();
+
+  // To update:
+  // drush migrate-import courses --update
+  // drush sql-query "update node__field_courses set field_courses_format='basic_html'"
+  // drush cr
+  //
+  // We're supposed to be able to set field_courses/format to basic_html with the migrate yml file, but
+  // for whatever reason, that is getting ignored.  
+}

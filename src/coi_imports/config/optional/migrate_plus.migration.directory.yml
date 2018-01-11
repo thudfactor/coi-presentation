@@ -1,0 +1,129 @@
+id: directory
+label: Import directory
+migration_group: default
+source:
+  plugin: csv
+  remote: https://my2.collegeofidaho.edu/media/xml/newcitydirectory.csv
+  preprocess_local: public://directory.csv 
+  path: public://directory_output.csv
+  delimiter: ','
+  enclosure: '"'
+  track_changes: true
+  header_row_count: 1
+  keys:
+    - Id
+destination:
+  plugin: entity:node
+  default_bundle: person
+process:
+  first_name:
+      plugin: choose
+      source:
+        - First Name
+        - Nickname
+  field_name/given: '@first_name'
+  field_name/family: Last Name
+  field_name/title:
+    plugin: static_map
+    source: Prefix
+    map:
+      Dr: Dr
+      Prof: Prof
+      Mr: ''
+      Ms: ''
+      Mrs: ''
+  field_positions: 
+    -
+      plugin: explode
+      source: Title
+      limit: 10
+      delimiter: '|'
+  field_email: Email
+  field_box: Box No
+  title:
+      plugin: concat
+      delimiter: " "
+      source:
+        - '@first_name'
+        - Last Name
+
+  field_phone:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Extension
+    -
+      plugin: phone
+  field_fax:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Fax
+    -
+      plugin: phone
+  dept_desc:
+    -
+      plugin: explode
+      source: Dept
+      limit: 10
+      delimiter: '|'
+    -
+      plugin: static_map
+      map:
+        ADM: Admission
+        ALUM: Alumni
+        ATH: Anthropology & Sociology
+        ARC: Archives
+        ART: Art
+        ATL: Athletics
+        BIO: Biology
+        BUACC: Business & Accounting
+        BKSTR: Bookstore
+        BUSO: Business Office
+        CMIN: Campus Ministries
+        CSFY: Campus Safety
+        CEL: Center for Experiential Learning
+        CHE: Chemistry
+        CNHS: Counseling & Health Services
+        DEV: Development
+        EDU: Education
+        ENG: English
+        PPLT: Facilities
+        HHP: Health & Human Performance
+        HIS: History
+        HR: Human Resources
+        ITEC: Information Technology
+        LSS: Learning Support Services
+        MCTR: Mail & Copy Center
+        COMM: Marketing & Communications
+        MATPH: Mathematics & Physical Sciences
+        MFL: Modern Foreign Languages
+        AMC: Multicultural Affairs
+        MUS: Music
+        MSM: Orma J. Smith Museum of Natural History
+        PHI: Philosophy & Religious Studies
+        PA: Physician Assistant Studies
+        POLEC: Political Economy
+        PRES: President
+        PSY: Psychology
+        RESL: Residence Life
+        SPVCS: Special Events & Conference Services
+        STAF: Student Affairs
+        OSFS: Student Financial Aid Services
+        SINV: Student Involvement
+        THE: Theatre
+        PLNT: Whittenberger Planetarium
+        ACAF: Academic Affairs
+        DEB: Debate
+        IR: Institutional Research
+        LIB: Library
+        REG: Registrar
+  field_department:
+    plugin: entity_lookup
+    source: '@dept_desc'
+    bundle: departments
+    value_key: name
+    bundle_key: vid
+    bundle: departments
+    entity_type: taxonomy_term
+    ignore_case: true

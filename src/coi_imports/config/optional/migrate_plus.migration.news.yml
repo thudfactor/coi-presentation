@@ -1,0 +1,62 @@
+langcode: en
+status: true
+id: news
+source:     
+  plugin: url     
+  data_fetcher_plugin: http     
+  data_parser_plugin: xml    
+  urls: https://www.collegeofidaho.edu/blog/news/feed-all
+  item_selector: '/rss/channel/item'
+  fields: 
+    -
+      name: guid
+      label: GUID
+      selector: guid
+    -
+      name: title
+      label: Title
+      selector: title
+    -
+      name: body
+      label: Body
+      selector: description
+    -
+      name: pub_date
+      label: 'Publication date'
+      selector: pubDate
+  ids:
+    guid:
+      type: string
+process:
+  title: title
+  created:
+    plugin: format_date
+    from_format: 'D, d M Y H:i:s O'
+    to_format: 'U'
+    source: pub_date
+  field_story_date:
+    plugin: format_date
+    from_format: 'D, d M Y H:i:s O'
+    to_format: 'Y-m-d'
+    source: pub_date
+  field_page_content:
+    plugin: save_news_entity
+    source: body
+  field_news_category:
+    -
+      plugin: default_value
+      default_value: 'Story Archive'
+    -
+      plugin: entity_lookup
+      bundle: news_category
+      value_key: name
+      bundle_key: vid
+      entity_type: taxonomy_term
+      ignore_case: true
+  status:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: entity:node
+  default_bundle: news
+migration_group: default

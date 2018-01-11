@@ -1,0 +1,9 @@
+name: CoI Imports
+description: 'Support for moving data from external sources into the CoI website '
+type: module
+core: 8.x
+dependencies:
+  - migrate
+  - migrate_tools
+  - migrate_plus
+  - fetch_to_local_csv

@@ -1,0 +1,126 @@
+<?php
+
+use Drupal\migrate\Row;
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessageInterface;
+use Drupal\migrate\MigrateMessage;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Event\MigrateEvents;
+use Drupal\migrate_plus\Entity\Migration;
+use Drupal\migrate_plus\Entity\MigrationGroup;
+use Drupal\migrate_plus\Plugin\MigrationConfigEntityPluginManager;
+use Drupal\migrate_tools\Controller\MigrationController;
+use \Drupal\node\Entity\Node;
+
+function coi_imports_cron() {
+  
+  //inits
+  $directory_interval = 86400;
+
+  // $cron_config = \Drupal::configFactory()->getEditable('coi_imports.cron');
+  //Do we need to run?
+  $directory_next_execution = \Drupal::state()->get('coi_imports.directory_next_execution');
+  $directory_next_execution = !empty($directory_next_execution) ? $directory_next_execution : 0;
+  \Drupal::logger('coi_imports')->notice($directory_next_execution.' is next execution time');
+  if ($_SERVER['REQUEST_TIME'] >= $directory_next_execution) {
+    
+    /** 
+     * Preprocess remote CSV
+     */
+
+    $csv_url = \Drupal::config('migrate_plus.migration.directory')->get('source.remote');
+    $preprocess_local = \Drupal::config('migrate_plus.migration.directory')->get('source.preprocess_local');
+    
+    //save remote to local
+    system_retrieve_file($csv_url,$preprocess_local , FALSE, TRUE);
+    
+    //build data structure to collapse mulitple title / dept lines
+    $file = fopen(drupal_realpath($preprocess_local), 'r');
+    $count=0;
+    $header=[];
+    $directory_array=[];
+    while (($line = fgetcsv($file)) !== FALSE) {
+        if ($count==0) {
+            $header=$line;
+        } else {
+            $directory_array[$line[0]]['data']=$line;
+            $directory_array[$line[0]]['title'][]=$line[5];
+            $directory_array[$line[0]]['department'][]=$line[6];
+        }
+        $count++;
+    }
+    fclose($file);
+    
+    //create new collapsed csv, with pipe-delimited titles, departments
+    $post_process_local = \Drupal::config('migrate_plus.migration.directory')->get('source.path');
+    $fp = fopen(drupal_realpath($post_process_local), 'w');
+    fputcsv($fp, $header);
+    foreach ($directory_array as $directory_member){
+        $directory_member['data'][5] = implode('|',$directory_member['title']);
+        $directory_member['data'][6] = implode('|',$directory_member['department']);
+        fputcsv($fp, $directory_member['data']);
+    }
+    fclose($fp);
+
+    /**
+     * RUN DIRECTORY MIGRATION   TO ADD / UPDATE PEOPLE
+     */
+    $migration = \Drupal::service('plugin.manager.migration')->createInstance('directory');
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $executable->import();
+    
+    //log entry and visible status
+    \Drupal::logger('coi_imports')->notice('Directory import ran');
+    if (\Drupal::state()->get('coi_imports_show_status_message')) {
+      drupal_set_message(t('Directory Import executed at %time', ['%time' => date_iso8601($_SERVER['REQUEST_TIME'])]));
+      \Drupal::state()->set('coi_imports_show_status_message', FALSE);
+    }
+    
+    //Set next run time
+    \Drupal::state()->set('coi_imports.directory_next_execution', $_SERVER['REQUEST_TIME'] + $directory_interval);
+    
+    /**
+     * UNPUBLISH PEOPLE NO LONGER IN CSV
+     */
+    
+    //create an array called remote_ids that contains
+    //all of the IDs of the people in remote csv file
+    $data = trim(file_get_contents(drupal_realpath($post_process_local)));
+    $rows = explode("\n",$data);
+    $remote_ids = array();
+    foreach($rows as $row) {
+        $remote_ids[] = (string)str_getcsv($row)[0];
+    }
+
+    //now create an array of those same remote IDs that drupal knows 
+    //about. Remote ID is the key, related Drupal people node is the value
+    $query = db_select('migrate_map_directory', 'm');
+    $query->fields('m', array('sourceid1', 'destid1'));
+    $query->range(0, 1000); //make sure we get all the people
+    $result = $query->execute();
+    foreach ($result as $record) {
+      $drupal_ids[(string)$record->sourceid1]=$record->destid1;
+    }
+
+    //For each Drupal node that was previously tied to a remote row,
+    //if that particular ID no longer exists in the csv
+    //unpublish the related node
+    foreach (array_keys($drupal_ids) as $key){
+        if (!in_array($key,$remote_ids)){
+            $node = Node::load($drupal_ids[$key]);
+            if ($node && $node->isPublished()){
+                \Drupal::logger('coi_imports')->notice('Directory unpublisher no longer sees '.$node->getTitle().' in remote source and is unpublishing this person from Directory.');
+                $node->setPublished(FALSE);
+                $node->save();
+            }
+        }
+    }
+
+
+
+
+    
+
+  }
+}

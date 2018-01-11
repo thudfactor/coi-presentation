@@ -1,0 +1,43 @@
+langcode: en
+status: true
+id: courses
+source:     
+  plugin: url     
+  data_fetcher_plugin: http     
+  data_parser_plugin: xml    
+  urls: https://iq2prod1.smartcatalogiq.com/APIs/progapi?path=/sitecore/content/Catalogs/College-of-Idaho/current/Undergraduate-Catalog  
+  item_selector: '/programs/program'
+  fields: 
+    - 
+      name: title 
+      label: Name 
+      selector: title
+    - 
+      name: path 
+      label: path 
+      selector: path
+    - 
+      name: GUID 
+      label: GUID 
+      selector: GUID
+    - 
+      name: field_courses 
+      label: Course Requirements 
+      selector: /*
+  ids:
+    path:
+      type: string
+process:
+  title: title
+  field_program_guid: GUID
+  field_courses/format:
+    plugin: default_value
+    default_value: "full_html"
+  field_courses/value:
+      plugin: coursetablebuilder
+      source:
+        - field_courses
+destination:
+  plugin: entity:node
+  default_bundle: degree_program
+migration_group: default
