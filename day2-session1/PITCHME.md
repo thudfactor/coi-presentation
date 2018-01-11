@@ -1,6 +1,4 @@
-# Website Administration Training
-
-### Prepared for the College of Idaho, January 2018
+# Introduction to SASS (SCSS)
 
 ---
 

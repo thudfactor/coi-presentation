@@ -1,6 +1,6 @@
-# Website Administration Training
+# Data migration and other modules
 
-### Prepared for the College of Idaho, January 2018
+### A GitPitch Presentation Template
 
 ---
 

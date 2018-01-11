@@ -1,6 +1,6 @@
-# Website Administration Training
+# Content types
 
-### Prepared for the College of Idaho, January 2018
+### Entities: nodes, paragraphs, and more
 
 ---
 

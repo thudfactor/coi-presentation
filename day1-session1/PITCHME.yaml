@@ -7,7 +7,8 @@
 theme : beige
 theme-override : assets/css/PITCHME.codemax.css
 logo : assets/image/logo.png
-highlight : hybrid
-transition : slide
-published : true
+highlight : atom-one-dark
+slide-number: true
+transition : none
+published : false
 footnote : "NewCity | The College of Idaho | Website Administration Training"

@@ -1,6 +1,6 @@
-# Beige CodeMax
+# Advanced content topics
 
-### A GitPitch Presentation Template
+### Field groups and views
 
 ---
 
@@ -101,7 +101,7 @@ http.createServer(function (request, response) {
 
 ---?image=assets/image/gitpitch-audience.jpg
 
-@title[Download this Template!]
+@title[Fork this Template!]
 
 ### <span class="white">Get your presentation started!</span>
 ### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/beige)
