@@ -1,10 +1,10 @@
 # Project overview
 
----image=image/project_overview.png&size=auto 90%
+---?image=image/project_overview.png&size=auto 90%
 
-+++image=assets/image/development.png&size=auto 90%
++++?image=assets/image/development.png&size=auto 90%
 
-+++image=assets/image/deployment.png&size=auto 90%
++++?image=assets/image/deployment.png&size=auto 90%
 
 ---
 
@@ -100,7 +100,7 @@ Pantheon helps meet many of our goals.
   - Git
 - Two Git repos on Gitlab.
 
-+++image=assets/image/docker.png
++++?image=assets/image/docker.png
 ## What is Docker?
 
 +++
