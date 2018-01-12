@@ -99,11 +99,11 @@ We don’t make much use of this (yet) but it can be a very useful monitoring / 
 
 One person:
 
-1. Make sure you are on the dev tab |
-2. Click the “Site Admin” tab |
-3. Log into your account here |
-4. Now make a dramatic change to the home page |
-5. Look at the live site to prove to yourself it is different. |
+1. Make sure you are on the dev tab 
+2. Click the “Site Admin” tab 
+3. Log into your account here 
+4. Now make a dramatic change to the home page 
+5. Look at the live site to prove to yourself it is different. 
 
 +++
 
@@ -111,10 +111,10 @@ One person:
 
 One person:
 
-1. Go back to the Pantheon tab |
-2. Click the “Database / Files” vertical tab |
-3. Clone the database from Live to Dev, then run update.php and clear caches. |
-4. What’s happening now? |
+1. Go back to the Pantheon tab 
+2. Click the “Database / Files” vertical tab 
+3. Clone the database from Live to Dev, then run update.php and clear caches. 
+4. What’s happening now? 
 5. Look at the front page of the dev site again. It should look like the live site.
 
 +++
