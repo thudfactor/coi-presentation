@@ -47,6 +47,8 @@ Code changes move _up_ from local development
 
 You must make admin-side config changes in production.
 
+(This is alarming)
+
 +++
 
 ### One Solution:
@@ -62,7 +64,7 @@ This is a manual process and requires you to be careful
 - Export the configuration to code |
 - Import the configuration in production |
 
-This is a scary process and we aren't confident in it yet
+This sounds good on paper
 
 ---
 

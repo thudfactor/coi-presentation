@@ -51,12 +51,9 @@ Is your development environment ready?
 
 ## Being Frank
 
-Our strengths are in design, UX, integration. Not maintenance. 
-
-We welcome feedback on this process and all other features of the integration.
-
 ![Frank Head](assets/image/frank2.jpg)
 
+Our strengths are in design, UX, integration. Not maintenance. 
 
 ## Next Section
 
