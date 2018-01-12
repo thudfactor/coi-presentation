@@ -1,6 +1,6 @@
 # Project overview
 
----?image=image/project_overview.png&size=auto 90%
+---?image=assets/image/project_overview.png&size=auto 90%
 
 +++?image=assets/image/development.png&size=auto 90%
 
