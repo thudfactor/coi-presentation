@@ -56,15 +56,16 @@ You must make admin-side config changes in production.
 - Make the changes in development (or a multidev) |
 - Recreate the changes in production |
 
-This is a manual process and requires you to be careful
+<span class="fragment">This is a manual process and requires you to be careful</span>
 
+---
 ### Ideal Solution:
 
 - Make the changes in development (or a multidev) |
 - Export the configuration to code |
 - Import the configuration in production |
 
-This sounds good on paper
+<span class="fragment">This sounds good on paper.</span>
 
 ---
 
