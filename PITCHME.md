@@ -59,5 +59,5 @@ Our strengths are in design, UX, integration. Not maintenance.
 
 ## Next Section
 
-[Day One, Session 1](https://gitpitch.com/thudfactor/coi-training?p=day1-session1)
+[Day One, Session 1](https://gitpitch.com/thudfactor/coi-training?p=11)
 

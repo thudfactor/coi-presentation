@@ -82,7 +82,7 @@ You must make admin-side config changes in production.
 
 Pantheon helps meet many of our goals. 
 
-- dev, test, prod to catch errors
+- dev, test, prod to catch errors 
 - enforces changes to dev only
 - provides robust backup and fallback options
 - provides Drupal core updates
@@ -91,27 +91,18 @@ Pantheon helps meet many of our goals.
 
 ### Pantheon weaknesses
 
-- Project root is site root
-- No solution for local development
-
-(Acquia scores better here, but Pantheon wins in other areas).
+- Project root is site root |
+- No solution for local development |
 
 ---
 
 ## Local Dev
 
-- Uses four separate Docker containers
-  - Two repos for module and theme work (local Drupal)
-  - Two repos for design work and page prototyping (Patternlab)
+- One repo for module and theme work (local Drupal)
+- One repo for design work and page prototyping (Patternlab)
 - Some extra command line tools / dependencies
-  - Terminus
-  - Composer
-  - Make
-  - Git
-- Two Git repos on Gitlab.
 
-+++?image=assets/image/docker.png
-## What is Docker?
++++?image=assets/image/docker.png&size=auto 70%
 
 +++
 ### Drupal Repo
@@ -127,7 +118,7 @@ Contains:
 
 ### Drupal CI 
 
-On a commit to the master branch, the Drupal CI script runs to deploy modules and themes to Pantheon. We may look at this in greater detail later.
+The Drupal CI script runs to deploy modules and themes to Pantheon. 
 
 +++
 
@@ -143,12 +134,10 @@ Contains:
 
 ### Patternlab CI
 
-On commit, Patternlab gets built and updated at http://newcity.gitlab.io/coi-styleguide/ with the help of a CI script.
-
-It also triggers the Drupal CI script.  
+CI builds Patternlab at http://newcity.gitlab.io/coi-styleguide/. 
 
 ---
 ## Next Section
 
-[Day One, Session 2](https://gitpitch.com/thudfactor/coi-training?p=day1-session2)
+[Day One, Session 2](https://gitpitch.com/thudfactor/coi-training?p=12)
 
