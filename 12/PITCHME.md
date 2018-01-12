@@ -56,7 +56,7 @@ Everything below the environment tabs affect that environment only.
 - "Visit" buttons |
 - "Locked," "Connection Info," "Clear Caches" |
 
-**Click each of the environments tabs and see what changes.**
+<span class="fragment">**Click each of the environments tabs and see what changes.**</span>
 
 +++ 
 
