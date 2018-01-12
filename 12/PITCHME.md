@@ -54,28 +54,19 @@ First, let's look at the stuff along the top.
 Everything below the environment tabs affect that environment only.
 
 - "Visit" buttons |
-- "Locked," "Connection Info," "Clear Caches"
+- "Locked," "Connection Info," "Clear Caches" |
 
-*Click each of the environments tabs and see what changes.*
+**Click each of the environments tabs and see what changes.**
 
 +++ 
 
 ### Code screen
 
-*Click back to the dev environment.*
+**Click back to the dev environment.**
 
 - "CI Bot" commits are incoming changes from Gitlab
 - "Pantheon" commits are usually upstream changes
 - Other kinds of commits are very rare
-
-+++
-
-### Updating Drupal
-
-Let's look briefly at a multidev environment to see what Drupal upgrades look like. 
-
-1. Click the "Multidev" tab
-2. 
 
 +++
 
@@ -163,7 +154,7 @@ Test should report that there are some commits ready to deploy. One person can d
 
 ### Important Tips
 
-Don't let experimental code hang out in Dev. It could get launched by someone else. *What should you use instead?*
+Don't let experimental code hang out in Dev. It could get launched by someone else. **What should you use instead?**
 
 Remember: Code up, Database Down
 
