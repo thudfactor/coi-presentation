@@ -179,8 +179,15 @@ One person:
 4. Unique SFTP / Connection strings are created for the site
 5. When done, the site will be available at http://training-college-of-idaho.pantheonsite.io
 
++++
 
+### Ooops.
 
+Try to log into the site. What happens?
 
+<span class="fragment">We will have to find a way to disable that recaptcha.</span>
 
+## Next Section
+
+[Day One, Session 3](https://gitpitch.com/thudfactor/coi-training?p=13)
 
