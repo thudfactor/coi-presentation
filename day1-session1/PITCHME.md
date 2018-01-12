@@ -1,6 +1,75 @@
 # Project overview
 
 ---
+## Environments
+
+![Complete Environment](assets/image/project_overview.png)
+
++++
+
+## Development Environment
+![Deployment Environment](assets/image/development.png)
+
++++
+## Deployment Environment
+![Deployment Environment](assets/image/deployment.png)
+
+---
+
+## Architecture Goals
+
+- Isolated theme, scripting, and design space |
+- Shared development space to coordinate with teams |
+- Test environment to preflight changes |
+- Stable, shielded production environment |
+
++++
+
+## Plan for carelessness
+
+"Pay more attention" is not an effective error-reduction strategy.
+
+- Automate as many common tasks as possible |
+- Especially deployments |
+- Provide common checkpoints |
+- Separate design concerns from Drupal concerns |
+
++++
+
+## First Rule of Deployment
+
+![Code Moves Up](assets/image/files_up.png)
+
+Code changes move _up_ from local development
+
+
++++
+
+## Second Rule of Deployment
+
+![Database Moves Down](assets/image/data_down.png)
+
++++ 
+
+## Configuration is often data (sadly)
+
+This means you must often make changes in production you might prefer to do in a development stage.
+
+I often do the work in development, then duplicate the steps in production.
+
++++
+
+## Room for improvement
+
+The solution is to find a way to export configuration to code. Drupal 8 claims to do this, but we haven't found an effective workflow yet.
+
+Getting this working to _your_ satisfaction is a good mid-term goal. [Here is a starting point.](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration)
+
+---
+
+---
+
+
 
 ## Tips!
 
