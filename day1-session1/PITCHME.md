@@ -19,7 +19,7 @@
 
 ### Plan for carelessness
 
-"Pay more attention" is not an effective error-reduction strategy.
+“Pay more attention” is not an effective error-reduction strategy.
 
 - Automate as many common tasks as possible |
 - Especially deployments |
@@ -43,19 +43,26 @@ Code changes move _up_ from local development
 
 +++ 
 
-### Configuration is often data (sadly)
+### Configuration is data
 
-This means you must often make changes in production you might prefer to do in a development stage.
-
-I often do the work in development, then duplicate the steps in production.
+You must make admin-side config changes in production.
 
 +++
 
-### Room for improvement
+### One Solution:
 
-The solution is to find a way to export configuration to code. Drupal 8 claims to do this, but we haven't found an effective workflow yet.
+- Make the changes in development (or a multidev) |
+- Recreate the changes in production |
 
-Getting this working to _your_ satisfaction is a good mid-term goal. [Here is a starting point.](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration)
+This is a manual process and requires you to be careful
+
+### Ideal Solution:
+
+- Make the changes in development (or a multidev) |
+- Export the configuration to code |
+- Import the configuration in production |
+
+This is a scary process and we aren't confident in it yet
 
 ---
 
@@ -137,10 +144,7 @@ On commit, Patternlab gets built and updated at http://newcity.gitlab.io/coi-sty
 
 It also triggers the Drupal CI script.  
 
---
-
-## Next Section
-
+---
 ## Next Section
 
 [Day One, Session 2](https://gitpitch.com/thudfactor/coi-training?p=day1-session2)

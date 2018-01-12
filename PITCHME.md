@@ -49,6 +49,15 @@ Is your development environment ready?
 
 ---
 
+## Being Frank
+
+Our strengths are in design, UX, integration. Not maintenance. 
+
+We welcome feedback on this process and all other features of the integration.
+
+![Frank Head](assets/image/frank2.jpg)
+
+
 ## Next Section
 
 [Day One, Session 1](https://gitpitch.com/thudfactor/coi-training?p=day1-session1)
