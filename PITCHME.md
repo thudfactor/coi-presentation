@@ -33,12 +33,6 @@ After lunch we will have time to work on issues or changes together.
 
 ---
 
-## Tools
-
-Is your development environment ready?
-
----
-
 ## Ground Rules
 
 @fa[fighter-jet] Stop me if I go too fast 
@@ -48,6 +42,13 @@ Is your development environment ready?
 @fa[question-circle] Ask questions at any time
 
 ---
+
+## Tools
+
+Is your development environment ready?
+
+---
+
 ## Next Section
 
 [Day One, Session 1](https://gitpitch.com/thudfactor/coi-training?p=day1-session1)
