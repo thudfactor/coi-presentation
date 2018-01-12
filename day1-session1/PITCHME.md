@@ -100,13 +100,48 @@ Pantheon helps meet many of our goals.
   - Git
 - Two Git repos on Gitlab.
 
-+++ 
++++image=assets/image/docker.png
 ## What is Docker?
 
 +++
 ### Drupal Repo
 
+Contains: 
+
+- Contains custom modules
+- Some config files
+- Composer.json file used to install modules on Pantheon
+- Makefile with commands to make installing and updating this simple
+
++++
+
+### Drupal CI 
+
+On a commit to the master branch, the Drupal CI script runs to deploy modules and themes to Pantheon. We may look at this in greater detail later.
+
 +++
 
 ### Patternlab Repo
+
+Contains: 
+
+- Example / Test design elements
+- Javascript code for the site
+- SVG Assets
+
++++
+
+### Patternlab CI
+
+On commit, Patternlab gets built and updated at http://newcity.gitlab.io/coi-styleguide/ with the help of a CI script.
+
+It also triggers the Drupal CI script.  
+
+--
+
+## Next Section
+
+## Next Section
+
+[Day One, Session 2](https://gitpitch.com/thudfactor/coi-training?p=day1-session2)
 
