@@ -69,12 +69,42 @@ Re-use fields when possible.
 
 ---
 
-## Form Display
+## Content Type Tabs
 
+- Edit |
+- Manage fields (currently on) |
+- Mange form display |
+- Manage display |
 
++++
 
+### Manage form display
 
+Controls how all the fields display on the content manager's screen.
 
+- Order of the fields |
+- What widget to use |
+- Field settings (hidden behind the gear) |
 
++++
+### Manage display
+
+Controls what's available to templates and default field order
+
+- Disabling Fields |
+- Format |
+- Display settings |
+- Order probably overridden |
+- Field groups aren't used |
+
++++
+
+### NewCity philosophy on display in Drupal:
+
+Keep as much design in code as possible
+
+## Next Section
+
+[Day One, Session 3](https://gitpitch.com/thudfactor/coi-training?p=13)
 
 
