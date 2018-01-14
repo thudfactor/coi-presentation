@@ -103,6 +103,83 @@ Controls what's available to templates and default field order
 
 Keep as much design in code as possible
 
+---
+
+## The Paragraphs module
+
+“Paragraph” is a field type that contains references to an **entity type** of "Paragraph Type," which can have many bundles. It has a simple interface for content managers. 
+
+- Benefit: very simple interface
+- Drawback: no content reuse
+
++++
+
+### Creating a new paragraph type
+
+1. Go to “Structure -> Paragraph types”
+2. Click “Add paragraph type”
+3. Continue as though you were making a content type.
+
++++
+
+### Adding a paragraph field 
+
+1. “Structure -> Content Types -> [your content type] -> Manage fields”
+2. Click “Add field”
+3. Select “Paragraph” from the “Add a new field” dropdown.
+4. “Save Field Settings”
+5. Make selections from the “Reference Type” section.
+
+### Using the paragraph field
+
+Now create a new entity of your content type and try out the paragraph field.
+
+---
+
+## Entity Construction Kit (ECK)
+
+ECK lets you create entity types and bundles on those types.
+
+- Benefit: significant content reuse
+- Drawback: More complicated user experience
+
++++ 
+
+### Creating a new Entity Type
+
+1. “Structure -> ECK Entity Types”
+2. “Add Entity Type”
+3. Type a label and select base fields
+
+The “Title” field is tricky…
+
++++
+
+### Creating a bundle
+
+1. From the dropdown on the “Operations” button, click “bundle list”
+2. “Add Aside Blocks bundle”
+3. Proceed as though for a content type
+
++++
+
+### Adding an Entity Type field
+
+1. “Manage fields” of your content type.
+2. Select “Content” from the “Add a new field” dropdown.
+3. Select your Entity Type from the “Content” subgroup of the “Type of item to reference” field.
+4. Select bundles from the list on the configuration screen.
+
++++
+
+### Entity Type creation considerations
+
+- A content reference field can only target one entity type
+- Field types can only be reused in the same entity type
+- Field names must be unique within an entity type
+
+---
+
 ## Next Section
 
 [Day One, Session 3](https://gitpitch.com/thudfactor/coi-training?p=13)

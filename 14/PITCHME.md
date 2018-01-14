@@ -4,105 +4,132 @@
 
 ---
 
-## Tips!
+## Paragraphs vs Entities
 
-<br>
+- Paragraphs are great for fragmentary content, like the parts of an article.
+- Entities are great for reusable units. 
+- Entities can be referenced in Paragraphs, Paragraphs in entities.
+- Some people use only one; we think they have different use cases.
 
-@fa[arrows gp-tip](Press F to go Fullscreen)
+--
 
-@fa[microphone gp-tip](Press S for Speaker Notes)
+## College of Idaho Entities
 
----
-
-## Template Features
-
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Image |
-- Slide-specific Background Images |
-- Custom Logo, TOC, and Footnotes |
-
----?code=src/go/server.go&lang=golang&title=Golang File
-
-@[1,3-6](Present code found within any repo source file.)
-@[8-18](Without ever leaving your slideshow.)
-@[19-28](Using GitPitch code-presenting with (optional) annotations.)
+- Headers |
+- Components |
+- Aside Blocks |
 
 ---
 
-@title[JavaScript Block]
+## College of Idaho Paragraphs
 
-<p><span class="slide-title">JavaScript Block</span></p>
+- Block / Editorial pairs |
+- Editorial |
+- Full-Width Block |
 
-```javascript
-// Include http module.
-var http = require("http");
-
-// Create the server. Function passed as parameter
-// is called on every request made.
-http.createServer(function (request, response) {
-  // Attach listener on end event.  This event is
-  // called when client sent, awaiting response.
-  request.on("end", function () {
-    // Write headers to the response.
-    // HTTP 200 status, Content-Type text/plain.
-    response.writeHead(200, {
-      'Content-Type': 'text/plain'
-    });
-    // Send data and end response.
-    response.end('Hello HTTP!');
-  });
-
-// Listen on the 8080 port.
-}).listen(8080);
-```
-
-@[1,2](You can present code inlined within your slide markdown too.)
-@[9-17](Displayed using code-syntax highlighting just like your IDE.)
-@[19-20](Again, all of this without ever leaving your slideshow.)
-
----?gist=onetapbeyond/494e0fecaf0d6a2aa2acadfb8eb9d6e8&lang=scala&title=Scala GIST
-
-@[23](You can even present code found within any GitHub GIST.)
-@[41-53](GIST source code is beautifully rendered on any slide.)
-@[57-62](And code-presenting works seamlessly for GIST too, both online and offline.)
+<span class="fragment">Paragraphs are used to replace WYSIWYG templates / inline placement of markup.</span>
 
 ---
 
-## Template Help
+### Field groups
 
-- [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides) 
-- [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
-- [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
-- [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
-- [Custom Logo](https://github.com/gitpitch/gitpitch/wiki/Logo-Setting), [TOC](https://github.com/gitpitch/gitpitch/wiki/Table-of-Contents), and [Footnotes](https://github.com/gitpitch/gitpitch/wiki/Footnote-Setting)
+1. “Manage Form Display” of your content type
+2. Click “Add group”
+3. Select “Fieldset”
+4. Grab some of your fields and move them under and to the right of the fieldset.
+5. Click “Save”
+
++++
+
+### Two-tiered groups
+
+1. “Manage Form Display” of your content type
+2. Click “Add group”
+3. Select “Tabs” and configure it.
+4. Click “Add group” again.
+5. Select “Tab” and configure it. Repeat 4-5 a couple more times.
+6. Populate each tab and save.
+
++++
+
+### Things about groups
+
+- Purely cosmetic 
+- No effect on the database 
+- No effect on presentation, variable names, etc
+- You can move grouped fields together as one
+
++++
+
+### Display groups
+
+- Display groups do affect output
+- We don't use them because we keep layout in code
 
 ---
 
-### Template Versions
+## Display modes
 
-- #### [Base Template  @fa[external-link gp-download]](https://gitpitch.com/templates/beige)
-- #### [Code Maximized @fa[external-link gp-download]](https://gitpitch.com/templates/beige?p=codemax)
-- #### [Speaker Notes @fa[external-link gp-download]](https://gitpitch.com/templates/beige?p=speaker)
+1. “Manage Display” of your content type
+2. Click the “Teaser” tab above the breadcrumb. This is the “Teaser” display.
+3. Click “Custom display settings”
+4. Check one of these boxes, then “Save.”
+5. A new tab will appear above the breadcrumb.
+
 
 ---
 
-### Questions?
+## Views
 
-<br>
+“Views” are how we query the content in a Drupal database. 
 
-@fa[twitter gp-contact](@gitpitch)
++++
 
-@fa[github gp-contact](gitpitch)
+### Creating a view
 
-@fa[medium gp-contact](@gitpitch)
+1. Go to “Structure -> Views”
+2. Click “Add View”
+3. Pick a name
+4. All the other options can be changed
 
----?image=assets/image/gitpitch-audience.jpg
++++
 
-@title[Fork this Template!]
+### Block vs Page view
 
-### <span class="white">Get your presentation started!</span>
-### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/beige)
+1. Pages get a URL
+2. Blocks get a block created on the block management screen
+3. Pick “Create a page” only for now.
+4. Better go ahead and give it a page title and path
+5. Leave the rest
 
+---
+
+## Parts of a View
+
+Views is organized logically by column.
+
+- Title
+- Format
+- Fields
+- Filter Criteria
+- Sort Criteria
+
++++
+
+### Second column
+
+- Page settings
+- Header
+- Footer
+- No Results
+- Pager
+- Meta Tags
+
++++
+
+### Advanced column
+
+- Contextual filters
+- Relationships
+- Exposed Form
+- Other
