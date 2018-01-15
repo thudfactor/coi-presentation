@@ -133,3 +133,7 @@ Views is organized logically by column.
 - Relationships
 - Exposed Form
 - Other
+
+---
+
+[Day Two, Session 1](https://gitpitch.com/thudfactor/coi-training?p=21)

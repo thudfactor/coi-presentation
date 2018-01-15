@@ -182,6 +182,6 @@ The “Title” field is tricky…
 
 ## Next Section
 
-[Day One, Session 3](https://gitpitch.com/thudfactor/coi-training?p=13)
+[Day One, Session 4](https://gitpitch.com/thudfactor/coi-training?p=14)
 
 
