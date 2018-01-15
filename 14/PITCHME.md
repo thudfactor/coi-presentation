@@ -1,7 +1,5 @@
 # Advanced content topics
 
-### Field groups and views
-
 ---
 
 ## Paragraphs vs Entities
@@ -11,7 +9,7 @@
 - Entities can be referenced in Paragraphs, Paragraphs in entities.
 - Some people use only one; we think they have different use cases.
 
---
++++
 
 ## College of Idaho Entities
 
@@ -19,7 +17,7 @@
 - Components |
 - Aside Blocks |
 
----
++++
 
 ## College of Idaho Paragraphs
 
@@ -30,6 +28,12 @@
 <span class="fragment">Paragraphs are used to replace WYSIWYG templates / inline placement of markup.</span>
 
 ---
+
+## Improving content entry
+
+We can make complicated content types less painful to use with field groups.
+
++++
 
 ### Field groups
 
@@ -70,12 +74,23 @@
 
 ## Display modes
 
+We can be more flexible about content presentation by using display modes.
+
+---
+
+### See display modes for a CT
+
 1. “Manage Display” of your content type
 2. Click the “Teaser” tab above the breadcrumb. This is the “Teaser” display.
 3. Click “Custom display settings”
 4. Check one of these boxes, then “Save.”
 5. A new tab will appear above the breadcrumb.
 
++++
+
+### About Display Modes More Later Also
+
+These really come into their own in templates and views,
 
 ---
 
@@ -106,7 +121,7 @@
 
 ## Parts of a View
 
-Views is organized logically by column.
+Views are organized logically by column.
 
 - Title
 - Format

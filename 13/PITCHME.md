@@ -11,13 +11,20 @@
   <dd>“A useful abstraction to group together fields.” Nodes, Comments, Files, Users, etc.</dd>
   <dt>Bundle</dt>
   <dd>An entity type with specific fields attached. For example, “Graduate Program.”</dd>
+</dl>
+
++++
+
+### Vocabulary pt 2
+
+<dl>
   <dt>Field</dt>
   <dd>A reusable piece of content that can be added to any bundle.</dd>
   <dt>Entity</dt>
   <dd>An instance of an entity type. (Content filled out.)</dd>
 </dl>
 
-+++
+---
 
 ### Create a new content type.
 
@@ -130,6 +137,8 @@ Keep as much design in code as possible
 4. “Save Field Settings”
 5. Make selections from the “Reference Type” section.
 
++++
+
 ### Using the paragraph field
 
 Now create a new entity of your content type and try out the paragraph field.
@@ -174,9 +183,11 @@ The “Title” field is tricky…
 
 ### Entity Type creation considerations
 
-- A content reference field can only target one entity type
-- Field types can only be reused in the same entity type
-- Field names must be unique within an entity type
+You can
+
+- Only target one entity type at a time |
+- Reuse fields only in the same entity type |
+- Reuse field names in different entity types |
 
 ---
 
