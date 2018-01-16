@@ -1,4 +1,4 @@
-# Beige Speaker
+## Black Speaker
 
 ### A GitPitch Presentation Template
 
@@ -106,7 +106,7 @@ Reinforce key points to drive home your message.
 - [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
 - [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
 - [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
-- [Custom Logo](https://github.com/gitpitch/gitpitch/wiki/Logo-Setting), [TOC](https://github.com/gitpitch/gitpitch/wiki/Table-of-Contents), and [Footnotes](https://github.com/gitpitch/gitpitch/wiki/Footnote-Setting)
+- [Custom Logo](https://github.com/gitpitch/gitpitch/wiki/Logo-Setting) [TOC](https://github.com/gitpitch/gitpitch/wiki/Table-of-Contents) [Footnotes](https://github.com/gitpitch/gitpitch/wiki/Footnote-Setting)
 
 Note:
 
@@ -120,14 +120,14 @@ online @ [GitPitch.com](https://gitpitch.com) :)
 
 ### Template Versions
 
-- #### [Base Template  @fa[external-link gp-download]](https://gitpitch.com/templates/beige)
-- #### [Code Maximized @fa[external-link gp-download]](https://gitpitch.com/templates/beige?p=codemax)
-- #### [Speaker Notes @fa[external-link gp-download]](https://gitpitch.com/templates/beige?p=speaker)
+- #### [Base Template  @fa[external-link gp-download]](https://gitpitch.com/gitpitch/templates/black)
+- #### [Code Maximized @fa[external-link gp-download]](https://gitpitch.com/gitpitch/templates/black?p=codemax)
+- #### [Speaker Notes @fa[external-link gp-download]](https://gitpitch.com/gitpitch/templates/black?p=speaker)
 
 Note:
 
 You can use the links on this slide to explore alternate
-versions of this template. 
+versions of this template.
 
 ---
 
@@ -146,12 +146,12 @@ Note:
 Encourage questions, it's a great opportunity to
 learn from your audience.
 
----?image=assets/image/gitpitch-audience.jpg
+---?image=assets/image/gitpitch-audience.jpg&opacity=100
 
 @title[Download this Template!]
 
-### <span class="white">Get your presentation started!</span>
-### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/beige)
+### Get your presentation started!
+### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/black)
 
 Note:
 
