@@ -166,15 +166,15 @@ becomes
 +++ 
 ### Filters can take arguments
 
-```
+```twig
 {% set people = ['John','Paul','George','Ringo'] %}
 <p>{{ people|join(', ') }}</p>
 ```
 
-+++ 
++++
 ### the Default filter
 
-```
+```twig
 {{ maybe_empty|default('This space left intentionally blank') }}
 {% set maybe_empty = 'Hello world' %}
 {{ maybe_empty|default('This space left intentionally blank') }}
