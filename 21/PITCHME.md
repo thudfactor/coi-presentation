@@ -75,7 +75,7 @@ $color-shade: #ccc;
 
 +++?code=src/scss/_foundation-settings.scss
 
-### Foundation Settings Override
+Foundation settings override file
 
 +++
 
