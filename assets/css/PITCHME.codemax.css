@@ -31,7 +31,6 @@ html:-moz-full-screen-ancestor {
   max-height: 60vh !important;
   border-radius: 10px;
   border: 1px #333 solid;
-  background-color: #222;
   padding: 1em;
 }
 
@@ -50,10 +49,6 @@ html:-moz-full-screen-ancestor {
   opacity: 0.75 !important;
   border-radius: 15px;
   display: none;
-}
-
-.hljs {
-  background : none;
 }
 
 #gp-logo img {
