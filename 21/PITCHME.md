@@ -10,7 +10,7 @@
 
 ### Nesting selectors
 
-```
+```scss
 .news-teaser__art {
   img {
     max-width: 100%;
@@ -22,7 +22,7 @@
 
 ### Context selectors
 
-```
+```scss
 .news-teaser__art {
   > img
 }
@@ -33,7 +33,7 @@
 
 ### Self-selector: &
 
-``` 
+```scss
 .news-teaser__art {
 	img {
 		max-width: 500px;
@@ -55,7 +55,7 @@
 
 Functions take arguments and return a value. 
 
-```
+```scss
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -65,7 +65,7 @@ Functions take arguments and return a value.
 
 ### Using variables 
 
-```
+```scss
 $color-shade: #ccc;
 
 .news-teaser__art {
@@ -83,7 +83,7 @@ Foundation settings override file
 
 Mixins are something like macros.
 
-```
+```scss
 @mixin full_width_block {
   display: block;
   width: 100%
@@ -104,7 +104,7 @@ Typography mixin
 
 ### @extend
 
-```
+```scss
 .news-meta {
   font-size: 12px;
   font-weight: bold;
@@ -121,7 +121,7 @@ Typography mixin
 
 ### Loops
 
-```
+```scss
 @for $i from 1 through 6 {
 	h#{$i} {
 		@include fontstyle("h#{$i}");
@@ -146,20 +146,20 @@ Twig is a PHP-based template system used by many tools, including Patternlab and
 
 ### Two types of Twig statements
 
-- Do something: `{% set a_variable = "Hello World" %}`
-- Print something: `{{ a_variable }}`
+- Do something: ```{% set a_variable = "Hello World" %}```
+- Print something: ```{{ a_variable }}````
 
 +++
 
 ### Filters
 
-```
+```twig
 <h1>{{ a_variable|upper }}</h1>
 ```
 
 becomes
 
-```
+```twig
 <h1>HELLO WORLD</h1>
 ```
 
@@ -183,7 +183,7 @@ becomes
 +++
 ### Functions that return strings
 
-```
+```twig
 <p>{{ fake('sentences',{nb: 20, asText: true}) }}</p>
 ```
 
@@ -193,7 +193,7 @@ Implementation of https://github.com/fzaninotto/Faker.
 
 ### Default and Faker together
 
-```
+```twig
 {{ maybe_empty|default(fake('words',{nb: 5, asText: true})) }}
 ```
 
@@ -211,7 +211,7 @@ Similar to many other languages:
 
 ### Sameas example
 
-```
+```twig
 {% set i = 1 %}
 {% if i is sameas(true) %}
   <p>“i” is {{ i }}</p>
