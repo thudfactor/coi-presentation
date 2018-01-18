@@ -67,21 +67,7 @@ Provide a name:
 {% include 'atoms-cite' with {citation: 'Yogi Berra'} %}
 ```
 
----
-
-## Heading
-
-```twig
-{% spaceless %}
-    <h{{ level|default(1) }}{% if style_modifier is not empty %} class="{{ style_modifier }}"{% endif %}>
-        {% if linked is sameas(true) %}
-            {% include 'atoms-link' with { label: headline|default(fake('bs')|titleize) } %}
-        {% else %}
-            {{ headline|default(fake('bs')|titleize) }}
-        {% endif %}
-    </h{{ level|default(1) }}>
-{% endspaceless %}
-```
+---?code=src/twig/heading.twig&lang=twig
 
 Heading pattern with optional level, linked text.
 
@@ -93,21 +79,23 @@ The `{% spaceless %}` block strips out line breaks and extraneous white space du
 
 ---?code=src/twig/headline-group.twig&lang=twig
 
-A headline group
-
 ---?code=src/twig/00-editorial.twig&lang=twig
 
-@[1](Many patterns have an extra `[x]_style` variable for design variation)
-@[4](What pattern to include is stored in a variable)
-@[9,12](What's this block nonsense?)
-
 +++?code=src/twig/00-editorial.json&lang=json
-
-@[3](Here is where we defined what pattern to show.)
 
 +++?code=src/twig/00-editorial~asides-only.json&lang=json
 
 ---?code=src/twig/00-editorial.twig&lang=twig
+
++++
+
+### Embed
+
+- Similar to `include`, but has an end tag.
+- Can also pass variables
+- `block` tags can override content in the embedded pattern.
+
+---?code=src/twig/30-with-sidebar.twig
 
 
 
