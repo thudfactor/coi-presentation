@@ -51,6 +51,8 @@ We're going to take a tour through some example patterns.
 
 ---?code=src/twig/cite.twig
 
+Citation pattern
+
 +++ 
 
 ### Include statement
@@ -65,5 +67,31 @@ Provide a name:
 {% include 'atoms-cite' with {citation: 'Yogi Berra'} %}
 ```
 
----?code=src/heading.twig
+---?code=src/twig/heading.twig
+
+Heading pattern with optional level, linked text.
+
++++
+
+### Spaceless
+
+The `{% spaceless %}` block strips out line breaks and extraneous white space during compilation.
+
+---?code=src/twig/headline-group.twig
+
+---?code=src/twig/00-editorial.twig
+
+@[1](Many patterns have an extra `[x]_style` variable for design variation)
+@[4](What pattern to include is stored in a variable)
+@[9,12](What's this block nonsense?)
+
++++?code=src/twig/00-editorial.json
+
+@[3](Here is where we defined what pattern to show.)
+
++++?code=src/twig/00-editorial~asides-only.json
+
+---?code=src/twig/00-editorial.twig
+
+
 

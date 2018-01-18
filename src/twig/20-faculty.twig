@@ -1,0 +1,38 @@
+{% extends 'base.twig' %}
+{% block main_content %}
+	{% include 'organisms-page-header' with { imgtag:'/images/faculty-header/pillars', headline : fake('name'), superhead : false, subhead: fake('jobTitle') } %}
+    {% embed 'molecules-with-sidebar' %}
+		{% block sidebar_sidebars %}
+			{% include 'organisms-directory-navigation' %}
+		{% endblock %}
+		{% block sidebar_content %}
+            {% embed 'organisms-editorial' with { editorial_style : 'editorial--aside-left', aside : 'organisms-headshot-aside' } %}
+                {% block editorial_content %}
+					<h2 class="show-for-sr">About {{ fake('name') }}</h2>
+					{% include 'molecules-content-group' with {level: 3, headline: 'Subjects', content_group_pattern: 'molecules-tag-list'} %}
+					{% include 'molecules-content-group' with {level: 3, headline: 'Contact', content_group_pattern: 'molecules-contact-list'} %}
+					{% include 'molecules-content-group' with {level: 3, headline: 'Expertise', content_group_pattern: 'atoms-paragraph'} %}
+                {% endblock %}
+            {% endembed %}
+			{% embed 'organisms-editorial' %}
+				{% block editorial_content %}
+					{% set sections = ['Personal statement','Professional experience','Education','Publications (selected)'] %}
+					{% for label in sections %}
+						{% if label is sameas('Publications (selected)') %}
+							{% include 'molecules-content-group' with {headline: label, content_group_pattern: 'molecules-academic-citation-list'} %}
+						{% elseif label is sameas('Education') %}
+							{% embed 'molecules-content-group' %}
+								{% block content_group_content %}
+									{% include 'atoms-heading' with {level: 2, headline: label} %}
+									{% include 'atoms-unordered-list' with { style_modifier: 'no-bullet' } %}
+								{% endblock %}
+							{% endembed %}
+						{% else %}
+							{% include 'molecules-content-group' with { headline: label, level: 2, formatted_text_sentences:random(10), formatted_text_paragraphs: random(3) } %}
+						{% endif %}
+					{% endfor %}
+				{% endblock %}
+			{% endembed %}
+		{% endblock %}
+	{% endembed %}
+{% endblock %}
