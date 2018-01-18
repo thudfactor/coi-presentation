@@ -49,6 +49,21 @@ We're going to take a tour through some example patterns.
 - Complex patterns
 - Layout patterns
 
-+++
+---?code=src/twig/cite.twig
 
-# 
++++ 
+
+### Include statement
+
+```twig
+{% include 'atoms-cite' %}
+```
+
+Provide a name:
+
+```twig 
+{% include 'atoms-cite' with {citation: 'Yogi Berra'} %}
+```
+
+---?code=src/heading.twig
+
