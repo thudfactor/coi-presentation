@@ -97,5 +97,7 @@ The `{% spaceless %}` block strips out line breaks and extraneous white space du
 
 ---?code=src/twig/30-with-sidebar.twig
 
+--- 
 
+[Day Two, Session 2](https://gitpitch.com/thudfactor/coi-training?p=23)
 
