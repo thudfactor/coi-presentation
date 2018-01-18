@@ -148,11 +148,15 @@ Twig is a PHP-based template system used by many tools, including Patternlab and
 
 Do something: 
 
-```{% set a_variable = "Hello World" %}```
+```twig
+{% set a_variable = "Hello World" %}
+```
 
 Print something: 
 
-```{{ a_variable }}````
+```twig
+{{ a_variable }}
+```
 
 +++
 
