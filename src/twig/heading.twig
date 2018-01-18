@@ -1,1 +1,9 @@
-<h{{ level|default(1) }}{% if style_modifier is not empty %} class="{{ style_modifier }}"{% endif %}>{% if linked is sameas(true) %}{% include 'atoms-link' with { link_style: 'arrow'} %}{% else %}{{ headline|default(fake('words',{asText: true})|titleize) }}{% endif %}</h{{ level|default(1) }}>
+{% spaceless %}
+<h{{ level|default(1) }}{% if style_modifier is not empty %} class="{{ style_modifier }}"{% endif %}>
+    {% if linked is sameas(true) %}
+        {% include 'atoms-link' with { link_style: 'arrow'} %}
+    {% else %}
+        {{ headline|default(fake('words',{asText: true})|titleize) }}
+    {% endif %}
+</h{{ level|default(1) }}>
+{% endspaceless %}
