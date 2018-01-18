@@ -231,4 +231,4 @@ Similar to many other languages:
 
 ---
 
-[Day Two, Session 2](https://gitpitch.com/thudfactor/coi-training?p=14)
+[Day Two, Session 2](https://gitpitch.com/thudfactor/coi-training?p=22)
