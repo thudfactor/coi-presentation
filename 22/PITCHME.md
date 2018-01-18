@@ -67,7 +67,21 @@ Provide a name:
 {% include 'atoms-cite' with {citation: 'Yogi Berra'} %}
 ```
 
----?code=src/twig/heading.twig&lang=twig
+---
+
+## Heading
+
+```twig
+{% spaceless %}
+    <h{{ level|default(1) }}{% if style_modifier is not empty %} class="{{ style_modifier }}"{% endif %}>
+        {% if linked is sameas(true) %}
+            {% include 'atoms-link' with { label: headline|default(fake('bs')|titleize) } %}
+        {% else %}
+            {{ headline|default(fake('bs')|titleize) }}
+        {% endif %}
+    </h{{ level|default(1) }}>
+{% endspaceless %}
+```
 
 Heading pattern with optional level, linked text.
 
