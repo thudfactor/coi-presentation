@@ -1,8 +1,8 @@
-# Basic Twig and Sass
+# Basic Sass and Twig
 
 ---
 
-## Getting started with SASS
+## Whirlwind introduction to SASS
 
 - Visit https://codepen.io/thudfactor/pen/dJjEWO and click the "Fork" button
 
@@ -49,13 +49,17 @@
 
 @[6-10]
 
-+++?code=src/scss/_unit.scss
++++
 
 ### Functions
 
 Functions take arguments and return a value. 
 
-@[26-55]
+```
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+```
 
 +++
 
@@ -115,3 +119,17 @@ Mixins are something like macros.
 
 +++
 
+### Loops
+
+```
+@for $i from 1 through 6 {
+	h#{$i} {
+		@include fontstyle("h#{$i}");
+		margin: rem-calc(8 0);
+	}
+}
+```
+
+### More information on Sass
+
+Documentation & more: http://sass-lang.com/
