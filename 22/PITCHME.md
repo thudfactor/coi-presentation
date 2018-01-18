@@ -28,3 +28,27 @@ Patternlab is an open-source tool used to create styleguides.
 +++
 
 ## Brief tour of Patternlab for College of Idaho
+
++++
+
+### Pattern organization
+
+- Files are in `src/patterns/`
+- Then “atoms,” “molecules,” “organisms,” “templates,” “pages”
+- Then subgroups
+- Numbers before names are optional, but help sort.
+- Stylesheets mirror patterns (for the most part)
+
+---
+
+## Example patterns
+
+We're going to take a tour through some example patterns.
+
+- Simple patterns
+- Complex patterns
+- Layout patterns
+
++++
+
+# 

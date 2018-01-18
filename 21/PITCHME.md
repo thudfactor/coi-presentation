@@ -98,7 +98,7 @@ Mixins are something like macros.
 
 +++?code=src/scss/_m_typography.scss
 
-### Typography mixin  
+Typography mixin  
 
 +++
 
@@ -115,7 +115,7 @@ Mixins are something like macros.
 }
 ```
 
-`@extend` appends the current selector to the selector of the @extend rule. This is not as good an idea as it sounds.
+`@extend` appends the current selector to the selector of the `@extend` rule. This is not as good an idea as it sounds.
 
 +++
 
@@ -130,6 +130,96 @@ Mixins are something like macros.
 }
 ```
 
++++
+
 ### More information on Sass
 
 Documentation & more: http://sass-lang.com/
+
+---
+
+## Twig 
+
+Twig is a PHP-based template system used by many tools, including Patternlab and Drupal 8.
+
++++ 
+
+### Two types of Twig statements
+
+- Do something: `{% set a_variable = "Hello World" %}`
+- Print something: `{{ a_variable }}`
+
++++
+
+### Filters
+
+```
+<h1>{{ a_variable|upper }}</h1>
+```
+
+becomes
+
+```
+<h1>HELLO WORLD</h1>
+```
+
++++ 
+### Filters can take arguments
+
+```
+{% set people = ['John','Paul','George','Ringo'] %}
+<p>{{ people|join(', ') }}</p>
+```
+
++++ 
+### the Default filter
+
+```
+{{ maybe_empty|default('This space left intentionally blank') }}
+{% set maybe_empty = 'Hello world' %}
+{{ maybe_empty|default('This space left intentionally blank') }}
+```
+
++++
+### Functions that return strings
+
+```
+<p>{{ fake('sentences',{nb: 20, asText: true}) }}</p>
+```
+
+Implementation of https://github.com/fzaninotto/Faker.
+
++++ 
+
+### Default and Faker together
+
+```
+{{ maybe_empty|default(fake('words',{nb: 5, asText: true})) }}
+```
+
++++
+
+### Comparisons
+
+Similar to many other languages:
+
+- `==`,`>`,`<`, etc.
+- For `===` use the `is sameas()` construction
+- Booleans are words (`and`,`or`) not symbols.
+
++++
+
+### Sameas example
+
+```
+{% set i = 1 %}
+{% if i is sameas(true) %}
+  <p>“i” is {{ i }}</p>
+{% else %}
+  <p>“i” is not true.</p>
+{% endif %}
+```
+
+---
+
+[Day Two, Session 2](https://gitpitch.com/thudfactor/coi-training?p=14)
