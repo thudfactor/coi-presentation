@@ -7,7 +7,7 @@
 theme : black
 theme-override : assets/css/PITCHME.codemax.css
 logo : assets/image/logo.png
-highlight : codepen-embed
+highlight : vs-2015
 slide-number: true
 transition : slide
 published : false
