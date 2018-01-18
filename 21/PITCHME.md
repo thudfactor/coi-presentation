@@ -146,8 +146,13 @@ Twig is a PHP-based template system used by many tools, including Patternlab and
 
 ### Two types of Twig statements
 
-- Do something: ```{% set a_variable = "Hello World" %}```
-- Print something: ```{{ a_variable }}````
+Do something: 
+
+```{% set a_variable = "Hello World" %}```
+
+Print something: 
+
+```{{ a_variable }}````
 
 +++
 
