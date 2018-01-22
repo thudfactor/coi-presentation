@@ -47,16 +47,6 @@ After lunch we will have time to work on issues or changes together.
 
 Is your development environment ready?
 
----
-
-## Being Frank
-
-![Frank Head](assets/image/frank2.jpg)
-
-Our strengths are in design, UX, integration. Not maintenance. 
-
----
-
 ## Next Section
 
 [Day One, Session 1](https://gitpitch.com/thudfactor/coi-training?p=11)
